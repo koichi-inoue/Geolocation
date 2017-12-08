@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>Geolocation</title>
+  <script src="sample.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1>Geolocation</h1>
+	<p>
+		<button onclick="start()">START</button>
+		<button onclick="stop()">STOP</button>
+	</p>
+
+	<h3>DATA</h3>
+  <ul>
+    <li>経度：<span id="longitude"></span></li>
+    <li>緯度：<span id="latitude"></span></li>
+    <li>誤差：<span id="accuracy"></span></li>
+    <li>高度：<span id="altitude"></span></li>
+    <li>誤差：<span id="altitudeAccuracy"></span></li>
+    <li>方位：<span id="heading"></span></li>
+    <li>速度：<span id="speed"></span></li>
+  </ul>
+
+	<h4>Error Message</h4>
+	<p><span id="error_message">Nothing</span></p>
+
+</body>
+</html>
