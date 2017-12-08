@@ -40,8 +40,8 @@ function start(){
 			var headingText = position.coords.heading + '';
 			var speedText = position.coords.speed + '';
 
-			longitude.innerText = longitudeText;
-			latitude.innerText = latitudeText;
+			longitude.innerText = longitudeText.substring(0, 10);
+			latitude.innerText = latitudeText.substring(0, 10);
 			accuracy.innerText = accuracyText;
 			altitude.innerText = altitudeText;
 			altitudeAccuracy.innerText = altitudeAccuracyText;
