@@ -1,4 +1,3 @@
-var timeInfo;
 var longitude;
 var latitude;
 var accuracy;
@@ -27,7 +26,7 @@ window.onload = function() {
 	heading = document.getElementById('heading');
 	speed = document.getElementById('speed');
 
-	errorMessageElement = document.getElementById('error_message');
+	messageElement = document.getElementById('message');
 
 	geoLocationOptions = {
 		enableHighAccuracy: true,
@@ -63,7 +62,7 @@ function start(){
 		},
 
 		function(positionError){
-			errorMessageElement.innerText = positionError.code + ': ' + positionError.message;
+			messageElement.innerText = positionError.code + ': ' + positionError.message;
 		},
 
 		geoLocationOptions
