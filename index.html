@@ -12,11 +12,7 @@
 	<div id="container">
 
 		<h1>Geolocation</h1>
-		<div id="buttons">
-			<button onclick="start()">START</button>
-			<button onclick="stop()">STOP</button>
-		</div>
-
+		<p id="timeInfo">00:00:00</p>
 		<h3>DATA</h3>
 	  <ul>
 	    <li>経度：<span id="longitude"></span></li>
@@ -27,6 +23,11 @@
 	    <li>方位：<span id="heading"></span></li>
 	    <li>速度：<span id="speed"></span></li>
 	  </ul>
+
+		<div id="buttons">
+			<button onclick="start()">START</button>
+			<button onclick="stop()">STOP</button>
+		</div>
 
 		<h4>System Message</h4>
 		<p><span id="error_message">使用後は[STOP]して下さい</span></p>

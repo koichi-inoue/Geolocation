@@ -1,3 +1,4 @@
+var timeInfo;
 var longitude;
 var latitude;
 var accuracy;
@@ -8,6 +9,14 @@ var speed;
 var errorMessageElement;
 var geoLocationOptions;
 var watchID;
+
+function StampTime(){
+	var t = new Date();
+	var hh = t.getHours(); if(hh<10){ hh = "0"+hh;}
+	var mm = t.getMinutes(); if(mm<10){ mm = "0"+mm;}
+	var ss = t.getSeconds(); if(ss<10){ ss = "0"+ss;}
+	return hh+ ':' + mm + ':' + ss;
+}
 
 window.onload = function() {
 	longitude = document.getElementById('longitude');
@@ -25,6 +34,8 @@ window.onload = function() {
 		timeout: 3000,
 		maximumAge: 600000
 	};
+
+	document.getElementById('timeInfo').innerText = '[ ' + StampTime() + ' ]';
 }
 
 function start(){
@@ -48,8 +59,7 @@ function start(){
 			heading.innerText = headingText;
 			speed.innerText = speedText;
 
-			console.log(new Date());
-
+			document.getElementById('timeInfo').innerText = '[ ' + StampTime() + ' ]';
 		},
 
 		function(positionError){
