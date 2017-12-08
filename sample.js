@@ -50,13 +50,13 @@ function start(){
 			var headingText = position.coords.heading + '';
 			var speedText = position.coords.speed + '';
 
-			longitude.innerText = longitudeText.substring(0, 10);
-			latitude.innerText = latitudeText.substring(0, 10);
-			accuracy.innerText = accuracyText;
-			altitude.innerText = altitudeText;
-			altitudeAccuracy.innerText = altitudeAccuracyText;
-			heading.innerText = headingText;
-			speed.innerText = speedText;
+			longitude.innerText = longitudeText.substring(0, 12);
+			latitude.innerText = latitudeText.substring(0, 12);
+			accuracy.innerText = accuracyText.substring(0, 12);
+			altitude.innerText = altitudeText.substring(0, 12);
+			altitudeAccuracy.innerText = altitudeAccuracyText.substring(0, 12);
+			heading.innerText = headingText.substring(0, 12);
+			speed.innerText = speedText.substring(0, 12);
 
 			document.getElementById('timeInfo').innerText = '[ ' + StampTime() + ' ]';
 		},
