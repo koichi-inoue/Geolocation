@@ -5,9 +5,11 @@ var altitude;
 var altitudeAccuracy;
 var heading;
 var speed;
-var errorMessageElement;
 var geoLocationOptions;
 var watchID;
+
+var messageElement;
+var timeInfo;
 
 function StampTime(){
 	var t = new Date();
@@ -26,15 +28,16 @@ window.onload = function() {
 	heading = document.getElementById('heading');
 	speed = document.getElementById('speed');
 
-	messageElement = document.getElementById('message');
-
 	geoLocationOptions = {
 		enableHighAccuracy: true,
 		timeout: 3000,
 		maximumAge: 600000
 	};
 
-	document.getElementById('timeInfo').innerText = '[ ' + StampTime() + ' ]';
+	messageElement = document.getElementById('message');
+	
+	timeInfo = document.getElementById('timeInfo');
+	timeInfo.innerText = '[ ' + StampTime() + ' ]';
 }
 
 function start(){
@@ -58,7 +61,7 @@ function start(){
 			heading.innerText = headingText.substring(0, 12);
 			speed.innerText = speedText.substring(0, 12);
 
-			document.getElementById('timeInfo').innerText = '[ ' + StampTime() + ' ]';
+			timeInfo.innerText = '[ ' + StampTime() + ' ]';
 		},
 
 		function(positionError){
