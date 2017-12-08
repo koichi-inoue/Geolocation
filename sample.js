@@ -29,6 +29,8 @@ window.onload = function() {
 
 function start(){
 
+	alert('GPS Running');
+
 	watchID = navigator.geolocation.watchPosition(
 
 		function(position){
@@ -64,5 +66,5 @@ function start(){
 
 function stop(){
 	navigator.geolocation.clearWatch(watchID);
-	alert('監視を停止しました。');
+	alert('GPS Stopped');
 }
