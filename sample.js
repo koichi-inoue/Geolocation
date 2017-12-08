@@ -29,8 +29,6 @@ window.onload = function() {
 
 function start(){
 
-	alert('GPS Running');
-
 	watchID = navigator.geolocation.watchPosition(
 
 		function(position){
@@ -61,6 +59,8 @@ function start(){
 		geoLocationOptions
 
 	);
+
+	alert('GPS Running');
 
 }
 
