@@ -1,4 +1,4 @@
-# JS_Geolocation
+# Geolocation
 JavaScript Geolocation Sample
 
 このサンプルでは、お使いのデバイスの位置情報を利用します。
